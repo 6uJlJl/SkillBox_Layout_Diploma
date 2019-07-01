@@ -83,6 +83,7 @@ html, body {
 	font-family: Roboto, Arial, sans-serif;
 	min-width: 320px;
 	overflow-x: hidden;
+	position: relative;
 }
 
 .hidden {
@@ -94,6 +95,7 @@ html, body {
 a {
 	text-decoration: none;
 	color: black;
+	cursor: pointer;
 }
 
 h2 {
@@ -108,6 +110,15 @@ h2 {
 		max-width: 1170px;
 		margin: 0 auto;
 		padding: 0 20px;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: #fff;
+	z-index: 1000;
+	padding-bottom: 10px;
 }
 
 	.header__container {
@@ -217,6 +228,7 @@ h2 {
 
 .main {
 	position: relative;
+	margin-top: 90px;
 }
 
 	.main__content {
@@ -627,6 +639,63 @@ h2 {
 		        align-items: center;
 		margin-top: 90px;
 	}
+/*=POP-Up===========================================================================================================================*/
+
+.pop-up {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1001;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+	padding: 40px;
+	width: 240px;
+	position: relative;
+}
+
+.popup__text {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.popup__input {
+	height: 43px;
+    width: 220px;
+	border: 1px solid #f82370;
+	margin-bottom: 15px;
+	font-size: 16px;
+	padding: 5px;
+	outline: none;
+}
+
+.fa-times-circle {
+	position: absolute;
+	top: 20px ;
+	right: 10px ;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+
+.popup__submit {
+    width: 235px;
+	margin: 20px 0 0;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.popup__span {
+	font-size: 14px;
+}
 
 /*=1024===========================================================================================================================*/
 

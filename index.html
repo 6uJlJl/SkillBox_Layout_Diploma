@@ -157,6 +157,26 @@
 				&copy; Алексей Меркулов, 2019
 			</div>
 		</footer>
+		<div class="pop-up">
+			<form action="" class="form">
+				<label class="popup__name">
+					<span class="popup__text">Введите ваше имя *,</span>
+					<input class="popup__input" type="text" placeholder="Имя" required>
+				</label>
+				<label class="popup__phone">
+					<span class="popup__text">контактный телефон *</span>
+					<input class="popup__input" type="tel" pattern="[0-9]{11}" placeholder="Телефон" required>
+				</label>
+				<label class="popup__mail">
+					<span class="popup__text">и электронную почту  *:</span>
+					<input class="popup__input" type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="e-mail" required>
+				</label>
+				<span class="popup__span">Я  свяжусь с вами в ближайшее время!</span>
+				<input class="popup__input popup__submit" type="submit" value="Отправить">
+				<small>* - Поля, обязательные к заполнению.</small>
+				<i class="far fa-times-circle fa-gradient"></i>
+			</form>
+		</section>
 	</body>
 </html>
 
