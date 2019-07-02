@@ -22,7 +22,7 @@
 				</nav>
 				<div class="contact">
 					<a class="phone header__phone" href="tel:+74999957755">+7 (499) 995-55-77</a>
-					<input class="contact__input" type="button" name="call" value="Заказать звонок">
+					<input class="contact__input input__click" type="button" name="call" value="Заказать звонок">
 					<span class="contact__span"><i class="fas fa-phone fa-gradient contact__i"></i></span>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 						<div class="main__person">
 							<div class="main__name">Алексей Меркулов</div>
 							<div class="main__text">Frontend разработчик и веб-верстальщик</div>
-							<input type="button" class="button main__button link-more" name="main-button" value="Узнать больше">
+							<input type="button" class="button main__button" name="main-button" value="Узнать больше">
 						</div>
 						<img class="main__img" src="img/person.png" alt="AM photo">
 					</div>
@@ -79,7 +79,7 @@
 								<p class="spec__item spec__item--4">Исправление и доработка существующей вёрстки</p>
 							</div>
 						</div>
-						<input type="button" class="button link-offer" name="spec-more" value="Узнать стоимость">
+						<input type="button" class="button main__button" name="spec-more" value="Узнать стоимость">
 					</div>	
 				</div>	
 			</section>
@@ -107,7 +107,7 @@
 						<span class="examples__dot dot-2" ></span>
 						<span class="examples__dot dot-3"></span>
 					</div>
-					<input type="button" class="button link-order" name="spec-more" value="Заказать проект">
+					<input type="button" class="button main__button" name="spec-more" value="Заказать проект">
 				</div>
 			</section>
 			<section class="offer">
@@ -144,7 +144,7 @@
 					</a>
 				</div>
 				<div class="footer__item footer__links">
-					<input class="footer__input" type="button" name="footer-button" value="Заказать звонок">
+					<input class="footer__input input__click" type="button" name="footer-button" value="Заказать звонок">
 					<div class="socials">
 						<a href="" class="socials__item socials__item--vk"></a>
 						<a href="" class="socials__item socials__item--fb"></a>
@@ -158,18 +158,18 @@
 			</div>
 		</footer>
 		<div class="pop-up">
-			<form action="" class="form">
+			<form action="https://formspree.io/mailtomerkulov@gmail.com" method="POST" class="form">
 				<label class="popup__name">
 					<span class="popup__text">Введите ваше имя *,</span>
-					<input class="popup__input" type="text" placeholder="Имя" required>
+					<input class="popup__input" name="name" type="text"  placeholder="Имя" required>
 				</label>
 				<label class="popup__phone">
 					<span class="popup__text">контактный телефон *</span>
-					<input class="popup__input" type="tel" pattern="[0-9]{11}" placeholder="Телефон" required>
+					<input class="popup__input" name="phone" type="tel" pattern="[0-9]{11}" placeholder="Телефон" required>
 				</label>
 				<label class="popup__mail">
-					<span class="popup__text">и электронную почту  *:</span>
-					<input class="popup__input" type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="e-mail" required>
+					<span class="popup__text">и электронную почту :</span>
+					<input class="popup__input" name="email" type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="e-mail">
 				</label>
 				<span class="popup__span">Я  свяжусь с вами в ближайшее время!</span>
 				<input class="popup__input popup__submit" type="submit" value="Отправить">

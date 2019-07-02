@@ -639,7 +639,7 @@ header {
 		        align-items: center;
 		margin-top: 90px;
 	}
-/*=POP-Up===========================================================================================================================*/
+/*=POP-UP===========================================================================================================================*/
 
 .pop-up {
 	width: 100%;
@@ -650,6 +650,9 @@ header {
 	justify-content: center;
 	align-items: center;
 	z-index: 1001;
+	transition: 1s;
+	transform: translateY(-100%);
+	background-color: #eeeeee60;
 }
 
 .form {
@@ -659,6 +662,10 @@ header {
 	padding: 40px;
 	width: 240px;
 	position: relative;
+}
+
+.pop-up_active {
+	transform: translateY(0);
 }
 
 .popup__text {
@@ -684,7 +691,6 @@ header {
 	font-size: 30px;
 	cursor: pointer;
 }
-
 
 .popup__submit {
     width: 235px;
@@ -974,6 +980,21 @@ header {
 	.footer__contact {
 		margin: 0 10px 0 0; 
 	}
+	.form {
+		padding: 30px;
+		width: 220px;
+	}
+	
+	.popup__text {
+		font-size: 12px;
+	}
+	
+	.popup__input {
+		height: 35px;
+		width: 200px;
+		font-size: 14px;
+	}
+
 }
 
 /*================================================================================================*/

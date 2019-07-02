@@ -119,4 +119,18 @@ $(function () {
 		changeImages (currentState);
 	})
 
+	$(".main__button").click(()=>{
+		$(".popup__mail").css("display","block")
+		$(".pop-up").toggleClass("pop-up_active");
+	})	
+
+	$(".fa-times-circle").click(()=>{
+		$(".pop-up").toggleClass("pop-up_active");
+	})
+
+	$(".input__click").click(()=>{
+		$(".popup__mail").css("display","none")
+		$(".pop-up").toggleClass("pop-up_active");
+	})
+
 });
