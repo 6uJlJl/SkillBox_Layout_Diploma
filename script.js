@@ -104,6 +104,21 @@ $(function () {
 		} 
 	})
 
+// Обработка Тач движений
+	let touchStart = 0;
+	$(".examples__items").on( "touchstart", function(event) {
+		touchStart = event.originalEvent.touches[0].clientX;
+	});
+	$(".examples__items").on( "touchend", function(event) {
+		if ( touchStart <= event.originalEvent.changedTouches[0].clientX ) {
+			currentState = (currentState+2)%3;
+			changeImages (currentState); }
+		else {
+			currentState = (currentState+1)%3;
+			changeImages (currentState); }
+	});
+
+// Обработчик точек слайдера
 	$(".dot-1").click(()=>{
 		currentState = 0;
 		changeImages (currentState);	
@@ -133,4 +148,6 @@ $(function () {
 		$(".pop-up").toggleClass("pop-up_active");
 	})
 
+// Маска телефона для формы 
+	$(".popup__tel").mask("+7 (999) 999-99-99");
 });

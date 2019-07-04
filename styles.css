@@ -652,6 +652,7 @@ header {
 	z-index: 1001;
 	transition: 1s;
 	transform: translateY(-100%);
+	opacity: 0;
 	background-color: #eeeeee60;
 }
 
@@ -666,6 +667,7 @@ header {
 
 .pop-up_active {
 	transform: translateY(0);
+	opacity: 1;
 }
 
 .popup__text {
