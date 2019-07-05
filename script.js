@@ -94,14 +94,21 @@ $(function () {
 	});
 
 	$("body").keydown((event)=>{
-		if ( event.keyCode == 39 ) {
+		// Стрелка направо
+		if ( event.keyCode == 39 ) {   
 			currentState = (currentState+1)%3;
 			changeImages (currentState);
 		}
+		// Стрелка налево
 		if ( event.keyCode == 37 ) {
 			currentState = (currentState+2)%3;
 			changeImages (currentState);	
-		} 
+		};
+		// Кнопка Esc при модальном окне
+		if (( event.keyCode == 27 ) && ( $(".pop-up").hasClass("pop-up_active")) ) {
+			$(".popup__mail").css("display","none")
+			$(".pop-up").toggleClass("pop-up_active");
+		}
 	})
 
 // Обработка Тач движений
@@ -137,7 +144,7 @@ $(function () {
 	$(".main__button").click(()=>{
 		$(".popup__mail").css("display","block")
 		$(".pop-up").toggleClass("pop-up_active");
-	})	
+	})
 
 	$(".fa-times-circle").click(()=>{
 		$(".pop-up").toggleClass("pop-up_active");
@@ -150,4 +157,10 @@ $(function () {
 
 // Маска телефона для формы 
 	$(".popup__tel").mask("+7 (999) 999-99-99");
+
+// Блокировка прокрутки
+
+	const targetElement = document.querySelector("body");
+
+
 });

@@ -596,7 +596,7 @@ header {
 		display: flex;
 		-webkit-box-pack: justify;
 		    -ms-flex-pack: justify;
-		        justify-content: space-between;
+		        justify-content: space-evenly;
 		padding-top: 30px;
 	}
 
@@ -656,6 +656,7 @@ header {
 	background-color: #eeeeee60;
 }
 
+
 .form {
 	display: flex;
 	flex-direction: column;
@@ -704,6 +705,11 @@ header {
 .popup__span {
 	font-size: 14px;
 }
+
+/* .fixed {
+	overflow: hidden;
+	width: 100%;
+} */
 
 /*=1024===========================================================================================================================*/
 
