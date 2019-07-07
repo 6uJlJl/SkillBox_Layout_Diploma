@@ -4,11 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Frontend</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.min.css">
+
 		<script src="https://kit.fontawesome.com/2ddc5ebcee.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-	<script src="script.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+		<script src="js/script.min.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -24,7 +27,6 @@
 				<div class="contact">
 					<a class="phone header__phone" href="tel:+79035083773">+7 (903) 508-37-73</a>
 					<input class="contact__input input__click" type="button" name="call" value="Заказать звонок">
-					<span class="contact__span"><i class="fas fa-phone fa-gradient contact__i"></i></span>
 				</div>
 			</div>
 		</header>
@@ -35,12 +37,12 @@
 						<div class="main__person">
 							<div class="main__name">Алексей Меркулов</div>
 							<div class="main__text">Frontend разработчик и веб-верстальщик</div>
-							<input type="button" class="button main__button" name="main-button" value="Узнать больше">
+							<input type="button" class="button main__button link-more" name="main-button" value="Узнать больше">
 						</div>
 						<img class="main__img" src="img/person.png" alt="AM photo">
 					</div>
 				</div>
-				<svg class="svg" width="850" height="650" xmlns="http://www.w3.org/2000/svg">
+				<svg class="svg" width="850" height="650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 					<defs>
 					    <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%"> 
 					      <stop offset="0%" style="stop-color: #ff8f5a ;stop-opacity:1" />
@@ -56,31 +58,23 @@
 							 S850 200, 850 200
 						 S850 650, 850 650" stroke="transparent" fill="url(#grad3)"/>
 				</svg>
-				<span class="elements main__elem main__elem--1">{ }</span>
-				<span class="elements main__elem main__elem--2">#</span>
-				<span class="elements main__elem main__elem--3">&lt; &#47; &gt;</span>
-				<span class="elements main__elem main__elem--4">&lt; div &gt;</span>
-				<span class="elements main__elem main__elem--5">&lt; div &gt;</span>
+				<span class="elements main__elem main__elem--1" aria-hidden="true">{ }</span>
+				<span class="elements main__elem main__elem--2" aria-hidden="true">#</span>
+				<span class="elements main__elem main__elem--3" aria-hidden="true">&lt; &#47; &gt;</span>
+				<span class="elements main__elem main__elem--4" aria-hidden="true">&lt; div &gt;</span>
+				<span class="elements main__elem main__elem--5" aria-hidden="true">&lt; div &gt;</span>
 			</section>
 			<section class="spec">
 				<div class="container">
 					<div class="spec__content">
 						<h2>Что я делаю</h2>
-						<div class="spec__items">
-							<div class="spec__content">
-								<p class="spec__item spec__item--1">Вёрстка лендинг–страниц и сайтов любой сложности</p>
-							</div>
-							<div class="spec__content">
-								<p class="spec__item spec__item--2">Адаптивная вёрстка под все браузеры и устройства</p>
-							</div>
-							<div class="spec__content">
-								<p class="spec__item spec__item--3">Frontend–разработка и программирование</p>
-							</div>
-							<div class="spec__content">
-								<p class="spec__item spec__item--4">Исправление и доработка существующей вёрстки</p>
-							</div>
-						</div>
-						<input type="button" class="button main__button" name="spec-more" value="Узнать стоимость">
+						<ul class="spec__items">
+							<li class="spec__item spec__item--1">Вёрстка лендинг–страниц и сайтов любой сложности</li>
+							<li class="spec__item spec__item--2">Адаптивная вёрстка под все браузеры и устройства</li>
+							<li class="spec__item spec__item--3">Frontend–разработка и программирование</li>
+							<li class="spec__item spec__item--4">Исправление и доработка существующей вёрстки</li>
+						</ul>
+						<input type="button" class="button button_click" name="spec-more" value="Узнать стоимость">
 					</div>	
 				</div>	
 			</section>
@@ -91,15 +85,15 @@
 					<button class="examples__arrow examples__arrow--direction-right"></button>
 					<div class="examples__items">
 						<div class="examples__item item-1">
-							<img src="./img/example-1-big.jpg" class="examples__image" alt="Сайт психолога Веры Антоновой">
+							<img src="img/example-1.jpg" class="examples__image" alt="Сайт психолога Веры Антоновой">
 							Сайт психолога Веры Антоновой
 						</div>
 						<div class="examples__item item-2">
-							<img src="./img/example-2-big.jpg" class="examples__image" alt="Сайт магазина детской одежды">
+							<img src="img/example-2.jpg" class="examples__image" alt="Сайт магазина детской одежды">
 							Сайт магазина детской одежды
 						</div>
 						<div class="examples__item item-3">
-							<img src="./img/example-3-big.jpg" class="examples__image" alt="Сайт магазина «Рыболов»">
+							<img src="img/example-3.jpg" class="examples__image" alt="Сайт магазина «Рыболов»">
 							Сайт магазина «Рыболов»
 						</div>
 					</div>
@@ -108,7 +102,7 @@
 						<span class="examples__dot dot-2" ></span>
 						<span class="examples__dot dot-3"></span>
 					</div>
-					<input type="button" class="button main__button" name="spec-more" value="Заказать проект">
+					<input type="button" class="button button_click" name="spec-more" value="Заказать проект">
 				</div>
 			</section>
 			<section class="offer">
@@ -120,9 +114,9 @@
 						* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
 					</div>
 				</div>
-				<span class="elements offer__elem-1">{ }</span>
-				<span class="elements offer__elem-2">&lt; &#47; &gt;</span>
-				<span class="elements offer__elem-3">&lt; div &gt;</span>
+				<span class="elements offer__elem-1" aria-hidden="true">{ }</span>
+				<span class="elements offer__elem-2" aria-hidden="true">&lt; &#47; &gt;</span>
+				<span class="elements offer__elem-3" aria-hidden="true">&lt; div &gt;</span>
 			</section>
 		</main>
 		<footer>

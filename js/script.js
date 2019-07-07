@@ -141,7 +141,7 @@ $(function () {
 		changeImages (currentState);
 	})
 
-	$(".main__button").click(()=>{
+	$(".button_click").click(()=>{
 		$(".popup__mail").css("display","block")
 		$(".pop-up").toggleClass("pop-up_active");
 	})
@@ -157,10 +157,5 @@ $(function () {
 
 // Маска телефона для формы 
 	$(".popup__tel").mask("+7 (999) 999-99-99");
-
-// Блокировка прокрутки
-
-	const targetElement = document.querySelector("body");
-
 
 });
