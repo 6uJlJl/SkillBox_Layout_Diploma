@@ -52,15 +52,15 @@ $(function () {
     		$(".main__elem--4").animate({ "left":"90%", "top":"10%" });
     		$(".main__elem--3").animate({ "left":"20%", "top":"85%" });
 		}
-		
+
 		$(".item-"+ currentState ).css("display", "flex");
-		currentState = 0;	
+		currentState = 0;
 		changeImages (currentState);
 		if ( $(window).width() <= 1024 ) { $(".item-3").css("display", "none"); } else {$(".item-3").css("display", "flex");}
 		if ( $(window).width() <= 950 ) { $(".item-2").css("display", "none"); } else {$(".item-2").css("display", "flex");}
-		
+
 	})
-	
+
 	function changeImages (state) {
 		$(".item-1").css("order",states[state][0]);
 		$(".item-2").css("order",states[state][1]);
@@ -68,7 +68,7 @@ $(function () {
 		$(".dot-"+(state+1)).addClass("examples__dot--active");
 		$(".dot-"+((state+1)%3+1)).removeClass("examples__dot--active");
 		$(".dot-"+((state+2)%3+1)).removeClass("examples__dot--active");
-		
+
 		if ( $(window).width()<=1024 ) {
 			( $(".item-1").css("order")==="1" ) ? $(".item-1").css("display","none") : $(".item-1").css("display","flex");
 			( $(".item-2").css("order")==="1" ) ? $(".item-2").css("display","none") : $(".item-2").css("display","flex");
@@ -95,14 +95,14 @@ $(function () {
 
 	$("body").keydown((event)=>{
 		// Стрелка направо
-		if ( event.keyCode == 39 ) {   
+		if ( event.keyCode == 39 ) {
 			currentState = (currentState+1)%3;
 			changeImages (currentState);
 		}
 		// Стрелка налево
 		if ( event.keyCode == 37 ) {
 			currentState = (currentState+2)%3;
-			changeImages (currentState);	
+			changeImages (currentState);
 		};
 		// Кнопка Esc при модальном окне
 		if (( event.keyCode == 27 ) && ( $(".pop-up").hasClass("pop-up_active")) ) {
@@ -128,7 +128,7 @@ $(function () {
 // Обработчик точек слайдера
 	$(".dot-1").click(()=>{
 		currentState = 0;
-		changeImages (currentState);	
+		changeImages (currentState);
 	});
 
 	$(".dot-2").click(() => {
@@ -155,7 +155,29 @@ $(function () {
 		$(".pop-up").toggleClass("pop-up_active");
 	})
 
-// Маска телефона для формы 
+// Маска телефона для формы
 	$(".popup__tel").mask("+7 (999) 999-99-99");
+
+// Отправка формы
+  $('#form').trigger('reset');
+  $('#form').on('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData( this );
+    $.ajax({
+      url: '../phpmailer/send.php',
+      type: 'POST',
+      contentType: false,
+      processData: false,
+      data: fd,
+      success: function(msg){
+        $(".pop-up").toggleClass("pop-up_active");
+        if(msg == 'ok') {
+          alert('Спасибо, Ваша заявка отправлена. Я свяжусь с вами как можно скорее!');
+        } else {
+          alert('Ошибка отправки. Попробуйте повторить попытку позднее...')
+        }
+      }
+    });
+  });
 
 });
