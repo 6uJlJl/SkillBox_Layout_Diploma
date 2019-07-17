@@ -1,0 +1,132 @@
+.header
+  position: fixed
+  width: 100%
+  top: 0
+  background-color: #fff
+  z-index: 1000
+  padding-bottom: 10px
+  &__container
+    display: flex
+    flex-direction: row
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+		padding-top: 30px
+		-webkit-box-align: center
+		ms-flex-align: center
+		align-items: center
+  &__menu
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    &-item:not(:last-child)
+      margin-right: 30px
+  &__burger
+    display: none
+    height: 28px
+    width: 32px
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #ff8f5a), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(41%, #ff8f5a), color-stop(60%, #ff2f96), color-stop(61%, transparent), color-stop(79%, transparent), color-stop(80%, #ff2f96))
+    background: -o-linear-gradient(bottom, #ff8f5a 19%, transparent 20%, transparent 40%, #ff8f5a 41%, #ff2f96 60%, transparent 61%, transparent 79%, #ff2f96 80%)
+    background: linear-gradient(to top, #ff8f5a 19%, transparent 20%, transparent 40%, #ff8f5a 41%, #ff2f96 60%, transparent 61%, transparent 79%, #ff2f96 80%)
+    cursor: pointer
+    &--active
+      height: 28px
+      width: 32px
+      background: -o-linear-gradient(45deg, transparent 45%, #ff8f5a 46%, #ff2f96 55%, transparent 56%), -o-linear-gradient(135deg, transparent 45%, #ff2f96 46%, #ff8f5a 55%, transparent 56%)
+      background: linear-gradient(45deg, transparent 45%, #ff8f5a 46%, #ff2f96 55%, transparent 56%), linear-gradient(-45deg, transparent 45%, #ff2f96 46%, #ff8f5a 55%, transparent 56%)
+  &__phone
+    font-weight: bold
+    margin-right: 30px
+
+.contact__input
+  height: 43px
+  width: 205px
+  border: 2px solid #f82370
+  background-color: white
+  color: #f53f4f
+  font-size: 16px
+  outline: none
+  cursor: pointer
+  &__span
+    display: none
+
+@media (max-width: 1024px)
+  .header
+    &__burger
+      display: block
+    &__menu
+      display: none
+      list-style-type: none
+      -webkit-box-orient: horizontal
+      -webkit-box-direction: normal
+      -ms-flex-direction: row
+      flex-direction: row
+      margin: 0
+      padding: 0
+      position: fixed
+      top: 80px
+      left: 0px
+      width: 100%
+      height: 90%
+      background-color: white
+      z-index: 100
+      overflow: hidden
+      -webkit-box-pack: space-evenly
+      -ms-flex-pack: space-evenly
+      justify-content: space-evenly
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      -ms-flex-direction: column
+      flex-direction: column
+      font-size: 25px
+      &-item:not(:last-child)
+        margin: 0 0 5px
+
+@media (max-width: 768px)
+	.contact
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    &__input
+      display: none
+    &__span
+      display: block
+      height: 30px
+      width: 30px
+      position: relative
+      border: double 2px transparent
+      border-radius: 17px
+      background-image: -o-linear-gradient(white, white), -o-radial-gradient(top, circle, #ff2f96, #ff8f5a)
+      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top, #ff2f96, #ff8f5a)
+      background-image: linear-gradient(white, white), radial-gradient(circle at top, #ff2f96, #ff8f5a)
+      background-origin: border-box
+      background-clip: content-box, border-box
+      cursor: pointer
+	.header
+    &__phone
+      padding-top: 4px
+      padding-right: 40px
+      font-size: 22px
+      position: relative
+      &::after
+        content: "\f095"
+        font-family: FontAwesome
+        position: absolute
+        font-size: 30px
+        top: 0
+        right: 0
+        z-index: 1
+        background: -o-linear-gradient(0deg, #f35c2c, #fa098f)
+        background: linear-gradient(0deg, #f35c2c, #fa098f)
+        -webkit-background-clip: text
+        -moz-background-clip: text
+        background-clip: text
+        -webkit-text-fill-color: transparent
+
+@media (max-width: 414px)
+  .header
+    &__phone
+      padding-top: 8px
+      font-size: 18px

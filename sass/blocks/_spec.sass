@@ -1,0 +1,69 @@
+.spec
+  &__content
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -ms-flex-preferred-size: 270px
+    flex-basis: 270px
+    text-align: center
+  &__items
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item
+    margin: 0
+    text-align: center
+    color: #8993ad
+    font-size: 20px
+    padding: 100px 10px 0
+    &--1
+      background: url("../img/spec/item-1.png") no-repeat
+      background-position: top center
+    &--2
+      background: url("../img/spec/item-2.png") no-repeat
+      background-position: top center
+    &--3
+      background: url("../img/spec/item-3.png") no-repeat
+      background-position: top center
+    &--4
+      background: url("../img/spec/item-4.png") no-repeat
+      background-position: top center
+
+@media (max-width: 1024px)
+  .spec
+    &__items
+      -ms-flex-wrap: wrap
+      flex-wrap: wrap
+      -webkit-box-pack: space-evenly
+      -ms-flex-pack: space-evenly
+      justify-content: space-evenly
+    &__content
+      margin-bottom: 85px
+    &__item
+      flex-basis: 40%
+      padding: 100px 20px 40px
+    &__button_link_offer
+      margin-top: 10px
+
+@media (max-width: 576px)
+  .spec
+    &__item
+      flex-basis: 100%
+
+@media (max-width: 414px)
+  .spec
+    &__item
+      font-size: 16px

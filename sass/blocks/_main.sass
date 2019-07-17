@@ -1,0 +1,144 @@
+.main
+  position: relative
+  margin-top: 90px
+  &__content
+    min-height: 650px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+  &__person
+    margin-top: 200px
+  &__name
+    font-size: 46px
+    font-weight: 900
+  &__text
+    font-size: 25px
+    color: #8993ad
+  &__button
+    margin-top: 40px
+  &__img
+    width: 466px
+    height: 631px
+    position: relative
+    right: -85px
+    top: 19px
+  &__elem
+    background: -o-linear-gradient(60deg, #f35c2c, #fa098f)
+    background: linear-gradient(30deg, #f35c2c, #fa098f)
+    -webkit-background-clip: text
+    -moz-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    top: 0
+    left: -100px
+    -webkit-transition: 1s
+    -o-transition: 1s
+    transition: 1s
+    &--1
+      -webkit-transform: rotate(30deg)
+      -ms-transform: rotate(30deg)
+      transform: rotate(30deg)
+    &--2
+      -webkit-transform: rotate(-30deg)
+      -ms-transform: rotate(-30deg)
+      transform: rotate(-30deg)
+    &--3
+      -webkit-transform: rotate(-10deg)
+      -ms-transform: rotate(-10deg)
+      transform: rotate(-10deg)
+    &--4
+      -webkit-transform: rotate(20deg)
+      -ms-transform: rotate(20deg)
+      transform: rotate(20deg)
+    &--5
+      font-size: 20px
+      -webkit-transform: rotate(-45deg)
+      -ms-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+
+.svg
+  position: absolute
+  right: 0px
+  bottom: 0
+  z-index: -1
+  &__size
+    &--small
+      fill: transparent
+
+@media (max-width: 1200px)
+  .svg
+    right: -160px
+
+@media (max-width: 1024px)
+  .main
+    overflow: hidden
+    &__img
+      position: absolute
+      right: 0
+    &__elem--5
+      display: none
+  .svg
+    right: -250px
+    top: 50px
+
+@media (max-width: 950px)
+  .main
+    overflow: hidden
+    &__content
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      height: auto
+    &__person
+      text-align: center
+      margin-top: 100px
+    &__img
+      position: relative
+      -webkit-box-ordinal-group: 0
+      -ms-flex-order: -1
+      order: -1
+    &__elem--4
+      left: 90%
+      top: 10%
+  .svg
+    top: 50px
+    right: 0
+    height: 600px
+
+@media (max-width: 768px)
+  .main
+    &__img
+      width: 346px
+      height: 450px
+  .svg
+    height: 420px
+    right: -50px
+    &__size
+      &--big
+        display: none
+      &--small
+        fill: url(#grad3)
+
+@media (max-width: 576px)
+  .svg
+    right: -100px
+
+@media (max-width: 414px)
+  .main
+    &__person
+      font-size: 30px
+    &__text
+      font-size: 20px
+    &__img
+      width: 250px
+      height: 320px
+  .svg
+    height: 290px
+    right: -250px

@@ -103,9 +103,9 @@ $(function () {
 			changeImages (currentState);
 		};
 		// Кнопка Esc при модальном окне
-		if (( event.keyCode == 27 ) && ( $(".pop-up").hasClass("pop-up_active")) ) {
+		if (( event.keyCode == 27 ) && ( $(".popup").hasClass("popup_active")) ) {
 			$(".popup__mail").css("display","none")
-			$(".pop-up").toggleClass("pop-up_active");
+			$(".popup").toggleClass("popup_active");
 		}
 	})
 
@@ -141,16 +141,16 @@ $(function () {
 
 	$(".button_click").click(()=>{
 		$(".popup__mail").css("display","block")
-		$(".pop-up").toggleClass("pop-up_active");
+		$(".popup").toggleClass("popup_active");
 	})
 
 	$(".fa-times-circle").click(()=>{
-		$(".pop-up").toggleClass("pop-up_active");
+		$(".popup").toggleClass("popup_active");
 	})
 
 	$(".input__click").click(()=>{
 		$(".popup__mail").css("display","none")
-		$(".pop-up").toggleClass("pop-up_active");
+		$(".popup").toggleClass("popup_active");
 	})
 
 // Маска телефона для формы
@@ -168,7 +168,7 @@ $(function () {
       processData: false,
       data: fd,
       success: function(msg){
-        $(".pop-up").toggleClass("pop-up_active");
+        $(".popup").toggleClass("popup_active");
         if(msg == 'ok') {
           alert('Спасибо, Ваша заявка отправлена. Я свяжусь с вами как можно скорее!');
         } else {

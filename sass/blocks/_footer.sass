@@ -1,0 +1,96 @@
+.footer
+  &__container
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+  &__item
+    padding-top: 75px
+  &__menu
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    font-size: 18px
+    &-item:not(:last-child)
+      margin-bottom: 15px
+  &__contact
+    font-size: 25px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    margin: 0 20px
+  &__mail
+    margin-top: 30px
+  &__input
+    width: 250px
+    height: 45px
+    background-color: white
+    border: 1px solid #ff5e79
+    font-size: 16px
+    color: #ff5e79
+    outline: none
+    cursor: pointer
+  &__black-bar
+    text-align: center
+    height: 80px
+    background-color: #31293c
+    color: white
+    font-size: 16px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    margin-top: 90px
+
+.socials
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-evenly
+  padding-top: 30px
+  &__item
+    width: 50px
+    height: 50px
+    background-image: url("../img/social.png")
+    background-repeat: no-repeat
+    &--vk
+      position: left
+    &--fb
+      background-position: -50px
+
+@media (max-width: 768px)
+  .footer
+    &__container
+      -ms-flex-wrap: wrap
+      flex-wrap: wrap
+      -ms-flex-pack: distribute
+      justify-content: space-around
+    &__item
+      padding-top: 50px
+
+@media (max-width: 414px)
+  .footer
+    &__container
+      -webkit-box-pack: start
+      -ms-flex-pack: start
+      justify-content: flex-start
+    &__contact
+      margin: 0 10px 0 0
+    &__contact
+      font-size: 19px
+    &__menu
+      font-size: 20px

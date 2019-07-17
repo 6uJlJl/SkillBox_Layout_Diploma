@@ -1,0 +1,59 @@
+.offer
+  background: -o-linear-gradient(60deg, #ff8f5a, #ff2f96)
+  background: linear-gradient(30deg, #ff8f5a, #ff2f96)
+  color: white
+  position: relative
+  &__main
+    font-size: 45px
+    font-weight: bold
+    padding: 85px 100px 0
+  &__comment
+    font-size: 19px
+    padding: 30px 100px 85px
+  &__elem
+    &-1
+      -webkit-transform: rotate(30deg)
+      -ms-transform: rotate(30deg)
+      transform: rotate(30deg)
+      top: 10%
+      left: 10%
+    &-2
+      -webkit-transform: rotate(-30deg)
+      -ms-transform: rotate(-30deg)
+      transform: rotate(-30deg)
+      top: 30%
+      left: 90%
+    &-3
+      -webkit-transform: rotate(-10deg)
+      -ms-transform: rotate(-10deg)
+      transform: rotate(-10deg)
+      top: 80%
+      left: 50%
+
+@media (max-width: 1024px)
+  .offer
+    &__main
+      padding: 80px 0 0
+    &__comment
+      padding: 30px 0 85px
+
+@media (max-width: 768px)
+  .offer
+    &__main
+      font-size: 35px
+    &__comment
+      font-size: 17px
+    &__elem-2
+      display: none
+
+@media (max-width: 576px)
+  .offer
+    &__main
+      font-size: 30px
+
+@media (max-width: 414px)
+  .offer
+    &__main
+      font-size: 28px
+    &__comment
+      font-size: 15px

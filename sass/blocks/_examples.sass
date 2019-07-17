@@ -1,0 +1,99 @@
+.examples
+  text-align: center
+  margin-bottom: 100px
+  &__container
+    position: relative
+  &__items
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    overflow-y: auto
+  &__item
+    display: flex
+    flex-direction: column
+    width: 350px
+    padding: 0 5px
+  &__image
+    width: 100%
+    margin-bottom: 10px
+    box-shadow: 0 2px 5px rgba(34, 25, 25, 0.4)
+    &:hover
+      box-shadow: 0 1px 4px rgba(34, 25, 25, 0.4)
+  &__description
+    color: #8993ad
+    font-size: 20px
+    font-weight: 500
+    display: block
+  &__arrow
+    padding: 0
+    border: none
+    height: 60px
+    width: 60px
+    position: absolute
+    top: 50%
+    cursor: pointer
+    border-radius: 30px
+    -webkit-box-shadow: 0 0 10px 2px #eee
+    box-shadow: 0 0 10px 2px #eee
+    background: url("../img/arrow.png") no-repeat
+    outline: none
+    &--direction
+      &-left
+        left: -10px
+        z-index: 100
+      &-right
+        right: -10px
+        -webkit-transform: rotate(180deg)
+        -ms-transform: rotate(180deg)
+        transform: rotate(180deg)
+        z-index: 100
+  &__dots
+    display: none
+    margin-top: 85px
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+  &__dot
+    width: 20px
+    height: 20px
+    border-radius: 10px
+    margin: 0 15px
+    cursor: pointer
+    background-color: #ebebeb
+    &--active
+      background-color: #ff4e2e
+
+@media (max-width: 1024px)
+  .examples
+    &__item
+      width: 455px
+    &__arrow
+      display: none
+    &__dots
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+
+@media (max-width: 950px)
+  .examples
+    &__items
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+    &__item
+      width: 455px
+
+@media (max-width: 576px)
+  .examples
+    &__item
+      width: 370px
+
+@media (max-width: 414px)
+  .examples
+    &__item
+      width: 280px
+    &__items
+      font-size: 18px

@@ -107,12 +107,10 @@ header {
 	display: -ms-flexbox;
 	display: flex;
 }
-  .menu__item {
-    border-bottom: 1px solid transparent;
-  }
 
 	.menu__item:hover {
-		border-color: #fc557c;
+		border-bottom: 1px solid #fc557c;
+		color: #fc557c;
 	}
 
 	.header__menu {
@@ -221,7 +219,7 @@ header {
 		right: 0px;
 		bottom: 0;
 		z-index: -1;
-  }
+	}
 
 	.svg_size--small {
 		fill: transparent;
@@ -238,10 +236,7 @@ header {
 	font-size: 30px;
 	font-weight: bold;
 	color: white;
-  position: absolute;
-  -webkit-transition: 1s;
-		-o-transition: 1s;
-		transition: 1s;
+	position: absolute;
 }
 
 	.main__elem {
@@ -253,16 +248,18 @@ header {
 			-webkit-text-fill-color: transparent;
 		top: 0;
 		left: -100px;
-    -webkit-transition: 1s;
-		-o-transition: 1s;
-		transition: 1s;
+		-webkit-transition: left 3s, top 3s;
+		-o-transition: left 3s, top 3s;
+		transition: left 3s, top 3s;
 	}
 
 	.elements:hover	{
 		-webkit-transform: rotate(360deg) scale(1.2);
 		    -ms-transform: rotate(360deg) scale(1.2);
 		        transform: rotate(360deg) scale(1.2);
-
+		-webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
 	}
 
 	.main__elem--1 {
@@ -326,12 +323,7 @@ header {
 	border: none;
 	outline: none;
 	cursor: pointer;
-  margin-top: 95px;
-  box-shadow: 0 2px 5px rgba(34, 25, 25, 0.4);
-}
-
-.button:hover {
-  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.4);
+	margin-top: 95px;
 }
 
 .main__button {
@@ -378,22 +370,22 @@ header {
 	}
 
 	.spec__item--1 {
-		background: url("../img/spec/item-1.png") no-repeat;
+		background: url("../img/item-1.png") no-repeat;
 		background-position: top center;
 	}
 
 	.spec__item--2 {
-		background: url("../img/spec/item-2.png") no-repeat;
+		background: url("../img/item-2.png") no-repeat;
 		background-position: top center;
 	}
 
 	.spec__item--3 {
-		background: url("../img/spec/item-3.png") no-repeat;
+		background: url("../img/item-3.png") no-repeat;
 		background-position: top center;
 	}
 
 	.spec__item--4 {
-		background: url("../img/spec/item-4.png") no-repeat;
+		background: url("../img/item-4.png") no-repeat;
 		background-position: top center;
 	}
 
@@ -444,31 +436,20 @@ header {
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 		overflow-y: auto;
+		color: #8993ad;
+		font-size: 20px;
+		font-weight: 500;
 	}
 
 	.examples__item {
 		display: flex;
-    flex-direction: column;
-    width: 350px;
-    padding: 0 5px;
+		flex-direction: column;
 	}
 
 	.examples__image {
-    width:100%;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(34, 25, 25, 0.4);
-  }
-
-  .examples__image:hover {
-    box-shadow: 0 1px 4px rgba(34, 25, 25, 0.4);
-  }
-
-  .examples__description {
-    color: #8993ad;
-		font-size: 20px;
-    font-weight: 500;
-    display: block;
-  }
+		width: 370px;
+		margin-bottom: 10px;
+	}
 
 	.examples__slider-dots {
 		display: none;
@@ -688,14 +669,6 @@ header {
 	width: 100%;
 } */
 
-/*=1200===========================================================================================================================*/
-
-@media (max-width: 1200px) {
-  .svg {
-		right: -160px;
-	}
-}
-
 /*=1024===========================================================================================================================*/
 
 @media (max-width: 1024px) {
@@ -766,7 +739,7 @@ header {
 	.spec__button_link_offer {
     	margin-top: 10px;
 	}
-	.examples__item {
+	.examples__image {
 		width: 455px;
 	}
 	.examples__arrow {
@@ -828,13 +801,10 @@ header {
 		    -ms-flex-pack: center;
 		        justify-content: center;
 	}
-	.examples__item {
+	.examples__image {
 		width: 455px;
 	}
-  .main__elem--4 {
-    left: 90%;
-    top: 10%;
-  }
+
 }
 
 /*====768============================================================================================*/
@@ -893,13 +863,14 @@ header {
 	.svg {
 		height: 420px;
 		right: -50px;
-  }
-  .svg__size--big {
-    display: none;
-  }
+	}
 	.svg_size--small {
 		fill: url(#grad3);
 	}
+	.svg_size--big {
+		fill: transparent;
+	}
+
 	.offer__main {
 		font-size: 35px;
 	}
@@ -929,11 +900,8 @@ header {
 	.spec__item{
 		flex-basis: 100%
 	}
-	.examples__item {
+	.examples__image {
 		width: 370px;
-  }
-  .svg {
-		right: -100px;
 	}
 }
 
@@ -952,7 +920,7 @@ header {
 	}
 	.svg {
 		height: 290px;
-		right: -250px;
+		right: -150px;
 	}
     .spec__item {
     	font-size: 16px;
@@ -974,7 +942,7 @@ header {
     	width: 280px;
     	height: 55px;
     }
-    .examples__item {
+    .examples__image {
 		width: 280px;
 	}
 	.examples__items{
