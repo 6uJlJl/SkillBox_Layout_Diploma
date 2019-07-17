@@ -95,7 +95,7 @@ header {
 		    -ms-flex-align: center;
 		        align-items: center;
 	}
-	
+
 /* =============== NAV ==============================*/
 
 .menu {
@@ -107,10 +107,12 @@ header {
 	display: -ms-flexbox;
 	display: flex;
 }
-	
+  .menu__item {
+    border-bottom: 1px solid transparent;
+  }
+
 	.menu__item:hover {
-		border-bottom: 1px solid #fc557c;
-		color: #fc557c;
+		border-color: #fc557c;
 	}
 
 	.header__menu {
@@ -219,7 +221,7 @@ header {
 		right: 0px;
 		bottom: 0;
 		z-index: -1;
-	}
+  }
 
 	.svg_size--small {
 		fill: transparent;
@@ -236,7 +238,10 @@ header {
 	font-size: 30px;
 	font-weight: bold;
 	color: white;
-	position: absolute;
+  position: absolute;
+  -webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
 }
 
 	.main__elem {
@@ -248,18 +253,16 @@ header {
 			-webkit-text-fill-color: transparent;
 		top: 0;
 		left: -100px;
-		-webkit-transition: left 3s, top 3s;
-		-o-transition: left 3s, top 3s;
-		transition: left 3s, top 3s;
+    -webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
 	}
 
 	.elements:hover	{
 		-webkit-transform: rotate(360deg) scale(1.2);
 		    -ms-transform: rotate(360deg) scale(1.2);
-		        transform: rotate(360deg) scale(1.2); 
-		-webkit-transition: 1s; 
-		-o-transition: 1s; 
-		transition: 1s;
+		        transform: rotate(360deg) scale(1.2);
+
 	}
 
 	.main__elem--1 {
@@ -287,7 +290,7 @@ header {
 		-webkit-transform: rotate(-45deg);
 		    -ms-transform: rotate(-45deg);
 		        transform: rotate(-45deg);
-	}	
+	}
 
 	.offer__elem-1 {
 		-webkit-transform: rotate(30deg);
@@ -310,7 +313,7 @@ header {
 		top: 80%;
 		left: 50%;
 	}
-	
+
 
 /*=========BUTTON======================*/
 
@@ -323,7 +326,12 @@ header {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	margin-top: 95px;
+  margin-top: 95px;
+  box-shadow: 0 2px 5px rgba(34, 25, 25, 0.4);
+}
+
+.button:hover {
+  box-shadow: 0 1px 4px rgba(34, 25, 25, 0.4);
 }
 
 .main__button {
@@ -370,22 +378,22 @@ header {
 	}
 
 	.spec__item--1 {
-		background: url("../img/item-1.png") no-repeat;
+		background: url("../img/spec/item-1.png") no-repeat;
 		background-position: top center;
 	}
 
 	.spec__item--2 {
-		background: url("../img/item-2.png") no-repeat;
+		background: url("../img/spec/item-2.png") no-repeat;
 		background-position: top center;
 	}
 
 	.spec__item--3 {
-		background: url("../img/item-3.png") no-repeat;
+		background: url("../img/spec/item-3.png") no-repeat;
 		background-position: top center;
 	}
 
 	.spec__item--4 {
-		background: url("../img/item-4.png") no-repeat;
+		background: url("../img/spec/item-4.png") no-repeat;
 		background-position: top center;
 	}
 
@@ -436,20 +444,31 @@ header {
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 		overflow-y: auto;
-		color: #8993ad;
-		font-size: 20px;
-		font-weight: 500; 
 	}
 
 	.examples__item {
 		display: flex;
-		flex-direction: column;
+    flex-direction: column;
+    width: 350px;
+    padding: 0 5px;
 	}
-	
+
 	.examples__image {
-		width: 370px;
-		margin-bottom: 10px;
-	}
+    width:100%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(34, 25, 25, 0.4);
+  }
+
+  .examples__image:hover {
+    box-shadow: 0 1px 4px rgba(34, 25, 25, 0.4);
+  }
+
+  .examples__description {
+    color: #8993ad;
+		font-size: 20px;
+    font-weight: 500;
+    display: block;
+  }
 
 	.examples__slider-dots {
 		display: none;
@@ -488,7 +507,7 @@ header {
 	}
 
 	.offer__comment {
-		font-size: 19px; 
+		font-size: 19px;
 		padding: 30px 100px 85px;
 	}
 
@@ -669,6 +688,14 @@ header {
 	width: 100%;
 } */
 
+/*=1200===========================================================================================================================*/
+
+@media (max-width: 1200px) {
+  .svg {
+		right: -160px;
+	}
+}
+
 /*=1024===========================================================================================================================*/
 
 @media (max-width: 1024px) {
@@ -730,7 +757,7 @@ header {
 		        justify-content: space-evenly;
 	}
 	.spec__content {
-		margin-bottom: 85px;		
+		margin-bottom: 85px;
 	}
 	.spec__item {
 		flex-basis: 40%;
@@ -739,7 +766,7 @@ header {
 	.spec__button_link_offer {
     	margin-top: 10px;
 	}
-	.examples__image {
+	.examples__item {
 		width: 455px;
 	}
 	.examples__arrow {
@@ -766,7 +793,7 @@ header {
 }
 
 /*==950==============================================================================================*/
-	
+
 @media (max-width: 950px) {
 	.main__content {
 		-webkit-box-orient: vertical;
@@ -801,15 +828,18 @@ header {
 		    -ms-flex-pack: center;
 		        justify-content: center;
 	}
-	.examples__image {
+	.examples__item {
 		width: 455px;
 	}
-
+  .main__elem--4 {
+    left: 90%;
+    top: 10%;
+  }
 }
 
 /*====768============================================================================================*/
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 	h2 {
 		font-size: 47px;
 	}
@@ -839,7 +869,7 @@ header {
 		position: relative;
 	}
 	.header__phone::after {
-		content: "\f095"; 
+		content: "\f095";
 		font-family: FontAwesome;
 		position: absolute;
 		font-size: 30px;
@@ -863,14 +893,13 @@ header {
 	.svg {
 		height: 420px;
 		right: -50px;
-	}
+  }
+  .svg__size--big {
+    display: none;
+  }
 	.svg_size--small {
 		fill: url(#grad3);
 	}
-	.svg_size--big {
-		fill: transparent;
-	}
-	
 	.offer__main {
 		font-size: 35px;
 	}
@@ -893,21 +922,24 @@ header {
 
 /*====576============================================================================================*/
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
 	.offer__main {
 		font-size: 30px;
 	}
 	.spec__item{
 		flex-basis: 100%
 	}
-	.examples__image {
+	.examples__item {
 		width: 370px;
+  }
+  .svg {
+		right: -100px;
 	}
 }
 
 /*====414============================================================================================*/
 
-@media (max-width: 414px) { 
+@media (max-width: 414px) {
 	.main__person {
     	font-size: 30px;
     }
@@ -920,7 +952,7 @@ header {
 	}
 	.svg {
 		height: 290px;
-		right: -150px;
+		right: -250px;
 	}
     .spec__item {
     	font-size: 16px;
@@ -942,7 +974,7 @@ header {
     	width: 280px;
     	height: 55px;
     }
-    .examples__image {
+    .examples__item {
 		width: 280px;
 	}
 	.examples__items{
@@ -960,17 +992,17 @@ header {
 		        justify-content: flex-start;
 	}
 	.footer__contact {
-		margin: 0 10px 0 0; 
+		margin: 0 10px 0 0;
 	}
 	.form {
 		padding: 30px;
 		width: 220px;
 	}
-	
+
 	.popup__text {
 		font-size: 12px;
 	}
-	
+
 	.popup__input {
 		height: 35px;
 		width: 200px;

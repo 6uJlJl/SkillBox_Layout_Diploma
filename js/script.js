@@ -7,15 +7,14 @@ $(function () {
 		[0,1,-1]
 	]
 
-	$(".main__elem--1").animate({ "left":"10%", "top":"10%" });
-	$(".main__elem--2").animate({ "left":"2%", "top":"45%" });
-	$(".main__elem--3").animate({ "left":"20%", "top":"90%" });
-	$(".main__elem--4").animate({ "left":"50%", "top":"20%" });
-	$(".main__elem--5").animate({ "left":"40%", "top":"45%" });
+	$(".main__elem--1").css({ "left":"10%", "top":"10%" });
+	$(".main__elem--2").css({ "left":"2%", "top":"45%" });
+	$(".main__elem--3").css({ "left":"10%", "top":"85%" });
+	$(".main__elem--4").css({ "left":"50%", "top":"20%" });
+	$(".main__elem--5").css({ "left":"40%", "top":"45%" });
 
 	if ( $(window).width() <= 1024 ) { $(".item-3").css("display", "none"); } else {$(".item-3").css("display", "flex");}
 	if ( $(window).width() <= 950 ) { $(".item-2").css("display", "none"); } else {$(".item-2").css("display", "flex");}
-
 
 	function closeMenu () {
 		$(".header__burger").removeClass("header__burger--active");
@@ -26,7 +25,7 @@ $(function () {
 	function goToSelector (selector) {
 		event.preventDefault();
 		let top = $(selector).offset().top;
-        $('body,html').animate({scrollTop: top}, 1000);
+    $('body,html').animate({scrollTop: top}, 1000);
 	}
 
 	$(".link-more").click ( (event)=> { closeMenu(); goToSelector (".spec"); })
@@ -46,19 +45,18 @@ $(function () {
     	 }
     })
 
-    $(window).resize( function (){
-    	closeMenu();
-    	if ( $(window).width() <= 950 ) {
-    		$(".main__elem--4").animate({ "left":"90%", "top":"10%" });
-    		$(".main__elem--3").animate({ "left":"20%", "top":"85%" });
-		}
-
+  $(window).resize( function (){
+    closeMenu();
 		$(".item-"+ currentState ).css("display", "flex");
 		currentState = 0;
-		changeImages (currentState);
+    changeImages (currentState);
 		if ( $(window).width() <= 1024 ) { $(".item-3").css("display", "none"); } else {$(".item-3").css("display", "flex");}
-		if ( $(window).width() <= 950 ) { $(".item-2").css("display", "none"); } else {$(".item-2").css("display", "flex");}
-
+		if ( $(window).width() <= 950 ) {
+      $(".item-2").css("display", "none");
+      $(".main__elem--4").css({ "left":"85%", "top":"10%" }); }
+    else {
+      $(".item-2").css("display", "flex");
+      $(".main__elem--4").css({ "left":"50%", "top":"20%" });}
 	})
 
 	function changeImages (state) {
