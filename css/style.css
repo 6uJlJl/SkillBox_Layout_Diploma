@@ -328,11 +328,11 @@ h2 {
 
 .main {
   position: relative;
-  margin-top: 90px;
+  margin-top: 130px;
 }
 
 .main__content {
-  min-height: 650px;
+  min-height: 615px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,11 +360,11 @@ h2 {
 }
 
 .main__img {
-  width: 466px;
-  height: 631px;
+  width: 600px;
+  height: 600px;
   position: relative;
   right: -85px;
-  top: 19px;
+  top: 15px;
 }
 
 .main__elem {
@@ -427,7 +427,7 @@ h2 {
   }
   .main__img {
     position: absolute;
-    right: 0;
+    right: -80px;
   }
   .main__elem--5 {
     display: none;
@@ -441,6 +441,7 @@ h2 {
 @media (max-width: 950px) {
   .main {
     overflow: hidden;
+    margin-top: 90px;
   }
   .main__content {
     -webkit-box-orient: vertical;
@@ -461,6 +462,7 @@ h2 {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
     order: -1;
+    top: 50px;
   }
   .main__elem--4 {
     left: 90%;
@@ -475,8 +477,10 @@ h2 {
 
 @media (max-width: 768px) {
   .main__img {
-    width: 346px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
+    top: 70px;
+    right: -30px;
   }
   .svg {
     height: 420px;
@@ -492,7 +496,7 @@ h2 {
 
 @media (max-width: 576px) {
   .svg {
-    right: -100px;
+    right: -150px;
   }
 }
 
@@ -504,8 +508,9 @@ h2 {
     font-size: 20px;
   }
   .main__img {
-    width: 250px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
+    top: 40px;
   }
   .svg {
     height: 290px;
