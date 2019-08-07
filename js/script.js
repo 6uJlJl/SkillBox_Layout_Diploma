@@ -57,17 +57,25 @@ $(function () {
     else {
       $(".item-2").css("display", "flex");
       $(".main__elem--4").css({ "left":"50%", "top":"20%" });}
-	})
+  })
+
+  function addFadeIn (selector, delay) {
+    let arr = document.querySelectorAll (selector);
+      for (let i=0; i < arr.length; i++ ) {
+        setTimeout(()=>{
+          arr[i].classList.add("fadeIn");
+        },i*delay);
+  }
 
   $(window).scroll(function(){
     if ( window.scrollY > 100 ) {
-      $(".spec__item").addClass("fadeIn");
+      addFadeIn (".spec__item", 400);
     }
     else {
       $(".spec__item").removeClass("fadeIn");
     }
     if ( window.scrollY > $(".spec__content").offset().top) {
-      $(".examples__image").addClass("fadeIn");
+      addFadeIn (".examples__image", 400);
     }
     else {
       $(".examples__image").removeClass("fadeIn");

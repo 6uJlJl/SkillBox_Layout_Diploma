@@ -565,8 +565,8 @@ h2 {
   opacity: 0;
   -webkit-transform: translateY(60px);
           transform: translateY(60px);
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .spec__item--1 {
@@ -595,8 +595,8 @@ h2 {
           transform: translateY(0px);
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 @media (max-width: 1024px) {
