@@ -59,6 +59,27 @@ $(function () {
       $(".main__elem--4").css({ "left":"50%", "top":"20%" });}
 	})
 
+  $(window).scroll(function(){
+    if ( window.scrollY > 100 ) {
+      $(".spec__item").addClass("fadeIn");
+    }
+    else {
+      $(".spec__item").removeClass("fadeIn");
+    }
+    if ( window.scrollY > $(".spec__content").offset().top) {
+      $(".examples__image").addClass("fadeIn");
+    }
+    else {
+      $(".examples__image").removeClass("fadeIn");
+    }
+    if ( window.scrollY > $(".examples__container").offset().top) {
+      $(".offer__main").addClass("fadeIn");
+    }
+    else {
+      $(".offer__main").removeClass("fadeIn");
+    }
+  })
+
 	function changeImages (state) {
 		$(".item-1").css("order",states[state][0]);
 		$(".item-2").css("order",states[state][1]);

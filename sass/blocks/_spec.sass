@@ -29,6 +29,9 @@
     color: #8993ad
     font-size: 20px
     padding: 100px 10px 0
+    opacity: 0
+    transform: translateY(60px)
+    transition-duration: 2s
     &--1
       background: url("../img/spec/item-1.png") no-repeat
       background-position: top center
@@ -41,6 +44,12 @@
     &--4
       background: url("../img/spec/item-4.png") no-repeat
       background-position: top center
+
+.spec__item.fadeIn
+  opacity: 1
+  transform: translateY(0px)
+  animation-name: fadeIn
+  animation-duration: 2s
 
 @media (max-width: 1024px)
   .spec

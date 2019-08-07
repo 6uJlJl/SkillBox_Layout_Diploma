@@ -22,6 +22,11 @@
     flex-direction: row
     &-item:not(:last-child)
       margin-right: 30px
+    &-item:hover
+      padding-bottom: 5px
+      transition-property: padding
+      transform: translateY(-5px)
+      transition: 0.3s
   &__burger
     display: none
     height: 28px

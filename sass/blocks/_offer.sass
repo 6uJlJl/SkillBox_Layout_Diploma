@@ -7,6 +7,9 @@
     font-size: 45px
     font-weight: bold
     padding: 85px 100px 0
+    opacity: 0
+    transform: translateY(60px)
+    transition-duration: 2s
   &__comment
     font-size: 19px
     padding: 30px 100px 85px
@@ -29,6 +32,11 @@
       transform: rotate(-10deg)
       top: 80%
       left: 50%
+.offer__main.fadeIn
+  opacity: 1
+  transform: translateY(0px)
+  animation-name: fadeIn
+  animation-duration: 2s
 
 @media (max-width: 1024px)
   .offer

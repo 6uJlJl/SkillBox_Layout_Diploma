@@ -16,10 +16,14 @@
     flex-direction: column
     width: 350px
     padding: 0 5px
+    overflow: hidden
   &__image
     width: 100%
     margin-bottom: 10px
     box-shadow: 0 2px 5px rgba(34, 25, 25, 0.4)
+    opacity: 0
+    transform: translateY(60px)
+    transition-duration: 2s
     &:hover
       box-shadow: 0 1px 4px rgba(34, 25, 25, 0.4)
   &__description
@@ -65,6 +69,17 @@
     background-color: #ebebeb
     &--active
       background-color: #ff4e2e
+
+.examples__image.fadeIn
+  opacity: 1
+  transform: translateY(0px)
+  animation-name: fadeIn
+  animation-duration: 2s
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 @media (max-width: 1024px)
   .examples
